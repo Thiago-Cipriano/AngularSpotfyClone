@@ -9,6 +9,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { RodapeUsuarioComponent } from 'src/app/components/rodape-usuario/rodape-usuario.component';
 import { HomeComponent } from '../home/home.component';
 import { TopArtistaComponent } from 'src/app/components/top-artista/top-artista.component';
+import { PainelDireitoComponent } from 'src/app/components/painelDireito/painelDireito.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { TopArtistaComponent } from 'src/app/components/top-artista/top-artista.
   declarations: [
     PlayerComponent,
     PainelEsquerdoComponent,
+    PainelDireitoComponent,
     BotaoMenuComponent,
     RodapeUsuarioComponent,
     HomeComponent,
