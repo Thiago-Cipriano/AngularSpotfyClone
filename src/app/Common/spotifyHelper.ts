@@ -3,6 +3,7 @@ import { IPlaylist } from "src/app/pages/Interfaces/IPlaylist";
 import { IArtista } from "../pages/Interfaces/IArtista";
 import { IMusica } from "../pages/Interfaces/IMusica";
 import { addMilliseconds, format } from "date-fns";
+import { newMusica } from "./factories";
 
 
 export function SpotifyUserParaUsuario(user: SpotifyApi.CurrentUsersProfileResponse): IUsuario {
@@ -30,6 +31,9 @@ export function SpotifyArtistaParaArtista(spotifyArtista: SpotifyApi.ArtistObjec
 }
 
 export function SpotifyTrackParaMusica(spotifyTrack: SpotifyApi.TrackObjectFull) : IMusica {
+
+  if (!spotifyTrack)
+    return newMusica();
 
   const msParaMinutos = (ms: number) => {
     const data = addMilliseconds(new Date(0), ms);

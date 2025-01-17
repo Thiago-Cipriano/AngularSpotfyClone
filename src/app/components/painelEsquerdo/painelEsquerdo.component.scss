@@ -13,7 +13,7 @@ $h-desconsiderar: calc($h-spotify-logo + $h-menu-opcoes + $h-footer-user);
   overflow-y: hidden;
   display: flex;
   flex-direction: column;
-  background-color: $cor-fundo2;
+  background-color: #222;
   box-shadow: 1px 0px 15px #00000012;
 
   .menus {
@@ -52,7 +52,7 @@ $h-desconsiderar: calc($h-spotify-logo + $h-menu-opcoes + $h-footer-user);
         align-self: flex-start;
         font-weight: 700;
         font-size: .7rem;
-        color: $preto-transparent-30;
+        color: #696969;
       }
 
       .playlist-scroll {

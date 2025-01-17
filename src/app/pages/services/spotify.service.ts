@@ -84,6 +84,11 @@ async buscarMusicas(offset =0, limit =50): Promise<IMusica[]> {
   return musicas.items.map(x => SpotifyTrackParaMusica(x.track));
 }
 
+async obterMsuicaAtual(): Promise<IMusica> {
+  const musicaSpotify =  await this.spotifyApi.getMyCurrentPlayingTrack();
+  return SpotifyTrackParaMusica(musicaSpotify.item);
+}
+
 logout() {
   localStorage.clear();
   this.router.navigate(['/login']);
@@ -101,5 +106,4 @@ getUserInformation() {
   return observable;
   }
 }
-
 
